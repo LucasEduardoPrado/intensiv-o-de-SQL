@@ -1,0 +1,289 @@
+## Aula 2
+
+##Comandos de seleção
+
+SELECT *
+
+OBJETIVO
+Selecionar
+todas as
+colunas e todas as
+linhas de uma tabela
+
+CÓDIGO
+SELEC *
+FROM Tabela;
+
+##
+
+SELECT(colunas)
+
+OBJETIVO
+Selecionar
+apenas
+colunas específicas de
+uma tabela
+
+CÓDIGO
+SELECT col1, col2
+FROM Tabela;
+##
+SELECT AS
+
+OBJETIVO
+Selecionar
+colunas
+específicas e dar um
+nome para essas
+colunas
+
+CÓDIGO
+SELECT 
+  Col1 AS 'Coluna 1',
+  col2 AS 'Coluna 2'
+FROM Tabela;
+##
+SELECT LIMIT
+
+OBJETIVO
+Selecionar apenas as N
+primeiras linhas de uma
+determinada tabela.
+
+CÓDIGO
+SELEC 
+    *
+FROM Tabela
+LIMIT 2;
+##
+SELECT DISTINCT
+
+OBJETIVO
+Selecionar apenas os
+valores distintos de uma
+coluna.
+
+CÓDIGO
+SELEC 
+    DISTINCT geneto
+FROM filmes;
+
+##Comandos de ordenação
+ORDER BY (ASC)
+OBJETIVO
+OBJETIVO: Permite ordenar (classificar ) 
+uma tabela a partir de uma determinada coluna
+ 
+CÓDIGO 
+ 
+SELECT *
+FROM Tabela
+ORDER BY col3;
+##
+ORDER BY (DESC)
+OBJETIVO: Permite ordenar (classificar ) 
+uma tabela a partir de uma determinada coluna
+ 
+CÓDIGO
+ 
+SELECT *
+FROM Tabela
+ORDER BY col3 DESC;
+
+##Comandos de filtragem
+
+SELECT WHERE
+
+OBJETIVO
+Filtrar
+uma tabela a
+partir de um determinado
+critério
+
+CÓDIGO
+SELECT
+   nome,
+   setor
+FROM resultados
+WHERE setor = 'Energia';
+##
+NÚMEROS
+OBJETIVO
+Podemos aplicar filtros em colunas numéricas.
+Para isso, basta utilizar os sinais
+lógicos como =, <, >, <=, >=, <>.
+
+CÓDIGO
+SELECT *
+FROM produtos
+WHERE Preco_Unit >= 1800;
+
+SELECT *
+FROM produtos
+WHERE Preco_Unit  = 1800;
+
+FILTROS DE TEXTOS
+##
+TEXTOS
+OBJETIVO
+Podemos aplicar filtros em colunas de texto.
+Para isso, basta utilizar o sinal de
+= e especificar o texto que deseja
+usar como critério do filtro.
+
+CÓDIGO
+SELECT *
+FROM produtos
+WHERE Marca_Produto = ‘DELL’;
+##
+FILTROS DE DATAS
+
+DATAS
+OBJETIVO
+Podemos aplicar filtros em colunas de data.
+Para isso, basta utilizar os sinais
+lógicos como =, <, >, <=, >=, <>.
+
+CÓDIGO
+SELECT *
+FROM produtos
+WHERE Data_Venda = ‘2019-01-03’;
+
+FILTROS DE NÚMEROS COM OPERADORES AND E OR
+##
+ AND
+
+OBJETIVO
+Podemos aplicar mais de um filtro usando o AND.
+Com ele, todas as condições
+devem ser satisfeitas para que o
+resultado seja mostrado.
+
+SELECT *
+FROM produtos
+WHERE Estado_Civil = ‘S’ AND Sexo =’M’;
+##
+ OR
+
+OBJETIVO
+Podemos aplicar mais de um filtro usando o OR.
+Com ele, apenas uma condição
+precisa ser satisfeita para que o
+resultado seja mostrado.
+
+SELECT *
+FROM produtos
+WHERE Marca_Produto = ‘DELL’ OR Marca_Produto  = ’SAMSUNG’ ;
+##
+OPERADOR IN
+
+OBJETIVO
+Com o operador IN, podemos
+passer uma lista de valores que
+serão utilizados como filtro na
+nossa coluna.
+
+CÓDIGO
+SELECT *
+FROM atores
+WHERE nacionalidade IN ('Canadá', 'Porto Rico', 'Irlanda');
+##
+BETWEEN
+
+OBJETIVO
+Com o operador IN, podemos
+passer uma lista de valores que
+serão utilizados como filtro na
+nossa coluna.
+
+CÓDIGO
+SELECT *
+FROM atores
+WHERE ano-nascimento BETWEEN 1980 AND 1983;
+
+## Funções matemáticas
+
+COUNT
+OBJETIVO 
+
+Retorna a quantidade total de valores de uma coluna. ignora os valores nulos
+
+CÓDIGO 
+SELECT
+	COUNT(Nome)
+FROM clientes;
+##
+COUNT(*)
+OBJETIVO
+
+Retorna a quantidade total de linhas de uma tabela.
+
+Obs: não ignora valores
+nulos
+CÓDIGO 
+SELECT
+	COUNT(*)
+FROM clientes;
+##
+COUNT(DISTINCT)
+
+OBJETIVO
+
+Retorna a contagem distinta de valores de uma tabela.
+
+CÓDIGO 
+SELECT
+	COUNT(DISTINCT Escolaridade)
+FROM clientes;
+##
+SUM
+
+OBJETIVO
+
+Retorna a soma total dos valores de uma coluna.
+CÓDIGO 
+SELECT
+	SUM(Receita_Venda)
+FROM pedidos;
+##
+AVG
+
+OBJETIVO
+
+Retorna a média dos
+valores de uma coluna.
+
+CÓDIGO 
+SELECT
+	AVG(Receita_Venda)
+FROM pedidos;
+##
+MIN
+
+OBJETIVO
+
+Retorna o valor mínimo de uma coluna.
+
+CÓDIGO 
+SELECT
+	MIN(Receita_Venda)
+FROM pedidos;
+
+##
+MAX
+
+OBJETIVO
+
+Retorna o valor máximo de uma coluna.
+
+CÓDIGO 
+SELECT
+	MAX(Receita_Venda)
+FROM pedidos;
+
+
+
+
+
+
+
