@@ -1,0 +1,33 @@
+﻿##CRIANDO AGRUPAMENTOS (GROUP BY)
+
+
+GROUP BY
+
+
+O Group By é o comando do SQL
+que vai nos permitir criar
+agrupamentos, ou seja, tabelas
+resumos das nossas tabelas
+principais.
+
+
+
+
+##FILTRANDO AGRUPAMENTOS (WHERE)
+G R O U P B Y + W H E R E
+
+
+Sempre que quisermos
+realizar um filtro ANTES de
+criar o agrupamento,
+usamos o WHERE.
+
+
+##FILTRANDO AGRUPAMENTOS (HAVING)
+G R O U P B Y + H A V I N G
+
+
+Sempre que quisermos
+realizar um filtro DEPOIS que
+o agrupamento foi criado,
+usamos o HAVING.

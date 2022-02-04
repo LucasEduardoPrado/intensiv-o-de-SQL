@@ -1,0 +1,74 @@
+﻿##CRIAÇÃO DE BANCOS DE DADOS E TABELAS
+Primeiro passo deve ser levantar as informações que serão salvas no banco de dados 
+
+
+##Criando Banco de Dados
+Código
+
+
+CREATE DATABASE nomedobanco;
+USE nomedobanco;
+
+
+##Criando Tabelas
+Código
+ CREATE TABLE nome_tabela(
+        coluna1 TIPO1,
+        coluna2 TIPO2,
+        coluna3 TIPO3,
+)
+
+
+
+
+Onde TIPO quer dizer o tipo de dado que será
+armazenado na coluna. Os tipos mais comuns
+são: inteiros, decimais, textos e datas.
+
+
+Inteiros são representados
+como INT.
+
+
+Decimais são representados
+como DECIMAL(10, 2).
+
+
+Textos são representados
+como VARCHAR(50).
+
+
+Datas são representadas
+como DATE.
+
+
+##Atualizando valores nas tabelas
+Código
+UPDATE cursos
+SET valor_curso = 750
+WHERE id_curso = 3;
+
+
+Não esqueça de usar o UPDATE em conjunto
+com o WHERE para atualizar apenas o valor
+de interesse.
+
+
+##Excluindo linhas de uma tabela
+Código 
+DELETE FROM vendas
+WHERE id_venda =5; 
+
+
+Não esqueça de usar o DELETE em conjunto
+com o WHERE para excluir apenas a linha de
+interesse.
+
+
+
+
+##Deletando Tabelas e Bancos de Dados
+ 
+Código 
+DROP TABLE alunos;
+DROP DATABASE hastidiomas;
